@@ -17,10 +17,11 @@ def open_image(img_path,size=False):
 
 def get_RGB(image):
     img = np.asanyarray(image)
-    print('Image dimmension is:',img.shape)
+    print('Image dimmension is',img.shape[:2],'with',img.shape[-1],'channels' )
     return img[:,:,0],img[:,:,1],img[:,:,2]
 
 def show_img(imgs):
+    plt.figure()
     if isinstance(imgs,(list,tuple)): 
         imgs = np.dstack(imgs)
         plt.imshow(imgs)
