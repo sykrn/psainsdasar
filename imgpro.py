@@ -37,7 +37,7 @@ def generate_tmatrix(img):
     t[:2,-1] = [-w/2,-h/2]
 
     m = np.zeros((3,3))
-    m[:2,:2] = np.random.randint(0,20,size=(2,2))/20
+    m[:2,:2] = np.random.randint(-20,20,size=(2,2))/20
     m+= np.eye(3)*0.5
     m[-1,-1] = 1
 
