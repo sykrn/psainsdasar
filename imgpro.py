@@ -31,7 +31,7 @@ def show_img(imgs):
 def generate_tmatrix(img):
     seed = img.sum()
     h,w = img.shape    
-    np.random.seed(int(seed))
+    np.random.seed(int(seed*10))
     
     t = np.eye(3)
     t[:2,-1] = [-w/2,-h/2]
