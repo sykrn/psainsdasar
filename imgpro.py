@@ -13,7 +13,7 @@ def clip(a,min=None,max=None):
     
 def open_image(img_path,size=False):
     img = Image.open(img_path)
-    if isinstance(size,tuple): img = img.resize(size, Image.ANTIALIAS)
+    if isinstance(size,tuple): img = img.resize(size, Image.LANCZOS)
     return img
 
 def get_RGB(image):
